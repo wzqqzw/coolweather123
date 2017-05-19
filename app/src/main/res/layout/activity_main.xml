@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,10 +8,41 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.wzq.main.MainActivity">
+    tools:context="com.example.wzq.main.MainActivity"
+    android:weightSum="1"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_weight="0.66" />
+
+    <Button
+        android:text="网络访问"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:id="@+id/button2"
+        android:visibility="gone"
+        android:layout_weight="0.09" />
 
     <TextView
-        android:layout_width="wrap_content"
+    android:text="TextView"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="27dp"
+    android:id="@+id/textView" />
+
+    <Button
+        android:text="返回"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:id="@+id/button"
+        android:visibility="gone"
+        android:elevation="1dp"
+        android:allowUndo="false" />
+
+</LinearLayout>
